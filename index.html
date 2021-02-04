@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script
+      async
+      custom-element="amp-sidebar"
+      src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"
+    ></script>
     <title>Hello, AMPs</title>
     <link
       rel="canonical"
@@ -76,15 +81,49 @@
         }
       </style>
     </noscript>
-    <style amp-custom>
-      amp-layout {
-        background-color: lavender;
-      }
-    </style>
   </head>
   <body>
-    <amp-layout layout="responsive" width="1" height="1">
-      <h1>Welcome to the mobile web</h1>
-    </amp-layout>
+    <h1>Welcome to the mobile web</h1>
+    <button on="tap:sidebar1.open">Open Sidebar</button>
+    <h2 id="menu1">Menu1</h2>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <h2 id="menu2">Menu2</h2>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <h2 id="menu3">Menu3</h2>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <p>......</p>
+    <amp-sidebar id="sidebar1" layout="nodisplay" side="right">
+      <ul>
+        <li><a href="#menu1" on="tap:menu1.scrollTo">Nav item 1</a></li>
+        <li><a href="#menu2" on="tap:menu2.scrollTo">Nav item 2</a></li>
+        <li><a href="#menu3" on="tap:menu3.scrollTo">Nav item 3</a></li>
+      </ul>
+    </amp-sidebar>
   </body>
 </html>
